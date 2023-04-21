@@ -1,8 +1,9 @@
  	
 	In the given project headder and footer are included in every page so 
-	i created this file as components for both the files 
+	i have created this file as components for both the files 
 	header.html and footer.html respectively
 
+	### 
 	To include those html file into html page 
 	w3-include-html attribute is used
 	and these atrribute only run on live server
