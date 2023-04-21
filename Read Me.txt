@@ -20,5 +20,4 @@
   	3.After installation right click on index.html open with live server
 	4.project will run perfectly and resonsive
 
-					Thnak you
-								Prasad Thopte
+					
