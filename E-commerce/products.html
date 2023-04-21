@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css"> 
+   
+
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+  <script src="code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+
+  
+
+
+<!---Include Html File-->
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+
+        <!---Include Html File-->
+</head>
+<body>
+    
+    <div w3-include-html="header.html"></div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Products</a></li>
+      
+      </ol>
+    </nav>
+    
+
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <h1>Filter</h1>
+
+          <div class="slidecontainer">
+            <h3>Price Range</h3>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+          </div>
+          
+          <script>
+          var slider = document.getElementById("myRange");
+          var output = document.getElementById("demo");
+          output.innerHTML = slider.value;
+          
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+          </script>
+          <br>
+
+<h3>Select Size</h3>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
+            <label class="form-check-label">S</label>
+            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
+            <label class="form-check-label">M</label>
+            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
+            <label class="form-check-label">L</label>
+            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
+            <label class="form-check-label">XXL</label>
+          </div>
+        </div>
+    
+        <div class="col-sm-10">
+   
+          <h2>Products</h2>
+
+      
+          
+          <div id="btnContainer">
+            <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+            <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+          </div>
+          <br>
+          
+          <div class="row">
+            <div class="column" >
+              <div class="card">
+                <img src="/img/products/men-27s-fashion-tshirts-500x500.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Round Neck T Shirt</h1>
+                <p class="price">Rs. 330</p>
+                <p>Our rich industry experience enables us to manufacture and export attractive and elegant patterns of Mens wear. As per the latest fashion style and latest market trends</p>
+                <a href="#" data-name="Round Neck T Shirt" data-price="330" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/men-ankle-length-jeans-500x500.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Ankle Length Jeans</h1>
+                <p class="price">Rs. 699</p>
+                <p>Brand: Stylox
+                  Description :
+                  Feel comfortable and look trendy by slipping into this pair of whisker</p>
+                <a href="#" data-name="Ankle Length Jeans" data-price="600" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+           
+          </div>
+          
+          <div class="row">
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/product-1000x1000.webp" alt="Denim Jeans" style="width:100%">
+                <h1>Faux Georgette</h1>
+                <p class="price">Rs.2150</p>
+                <p>Sleeves :- Faux Georgette Embroidery work + Stone
+                  Inner :- Santoon
+                  Bottom :- Santoon
+                  Dupatta :- Nazmin Chiffon with Siqwans Emb.work</p>
+                <a href="#" data-name="Faux Georgette" data-price="2150" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+            <div class="column" >
+              <div class="card">
+                <img src="img//products/product-1000x1000 (1).webp" alt="Denim Jeans" style="width:100%">
+                <h1>Denim Halter Neck</h1>
+                <p class="price">Rs.500</p>
+                <p>Georgette, Denim
+                  Neck type	
+                  Halter Neck, Round Neck, V Neck
+                  Occasion	
+                  Casual Wear, Formal Wear, Party Wear, Ethnic</p>
+                <a href="#" data-name="Denim Halter Neck" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="row">
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/kids-crop-top-set-500x500.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Kids Girls Kids Crop Top And Skirt Set</h1>
+                <p class="price">Rs.650</p>
+                <p>Gender	
+                  Kids Girls
+                  Product Type	
+                  Kids Ethnic Wear
+                  Color	
+                  All colors are available</p>
+                <a href="#" data-name="Kids Girls Kids Crop Top And Skirt Set" data-price="650" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/kids-denim-jeans-500x500.webp" alt="Denim Jeans" style="width:100%">
+                <h1>Wiz-Kids Party Wear Kids </h1>
+                <p class="price">Rs.285</p>
+                <p>Brand	
+                  Wiz-Kids
+                  Is It Stretchable	
+                  Stretchable
+                  Size	
+                  32-40
+                  Fabric	
+                  Denim</p>
+                <a href="#" data-name="Wiz-Kids Party Wear Kids " data-price="285" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="row">
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/all-type-formals-500x500.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Formals For Men</h1>
+                <p class="price">Rs.1200</p>
+                <p>Some text about the jeans..</p>
+                <a href="#" data-name="Formals For Men" data-price="1200" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+            <div class="column" >
+              <div class="card">
+                <img src="img/products/1572857757623-jpg-1000x1000.webp" alt="Denim Jeans" style="width:100%">
+                <h1>Woolen Plain Ladies Business Formal Wear</h1>
+                <p class="price">Rs.1500</p>
+                <p>Some text about the jeans..</p>
+                <a href="#" data-name="Woolen Plain Ladies Business Formal Wear" data-price="1500" class="add-to-cart btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="center">
+          <ul class="pagination">
+            <li class="active"><a href="#">1</a></li>
+            <li ><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+          </ul>
+          </div>
+          <script>
+            // Get the elements with class="column"
+            var elements = document.getElementsByClassName("column");
+            
+            // Declare a loop variable
+            var i;
+            
+            // List View
+            function listView() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "100%";
+              }
+            }
+            
+            // Grid View
+            function gridView() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "50%";
+              }
+            }
+            
+            /* Optional: Add active class to the current button (highlight it) */
+            var container = document.getElementById("btnContainer");
+            var btns = container.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+            </script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: Rs.<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="checkout.html" button type="button" class="btn btn-primary" >Order now</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+
+    </div>
+
+   
+  </div>
+</div>
+    
+    
+     <br><br>
+      
+    <div w3-include-html="footer.html"></div>
+
+    
+    <script>
+        includeHTML();
+        </script>
+        <script src="js/script.js"></script>
+</body>
+</html>

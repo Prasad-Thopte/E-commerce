@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+  <title>Persians</title>
+  
+       
+  
+
+
+  <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+<script src="code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+  </head>
+<!---Include Html File-->
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
+    <!---Include Html File-->
+</head>
+<body>
+
+    <div w3-include-html="header.html"></div>
+
+    
+    
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Login</a></li>
+        
+        </ol>
+      </nav>
+  
+  
+    
+    
+    
+   
+    
+    
+   
+    <div class="container1">
+    
+        <div class="row">
+            <h2 style="text-align:center">Sign Up Or Login</h2>
+            <div class="vl">
+            <span class="vl-innertext">or</span>
+          </div>
+    <form action="">
+          <div class="col">
+           
+            <input type="text" name="username1" placeholder="Username" required><br><br>
+            <input type="email" name="email1" placeholder="Email" required><br><br>
+            <input type="password" name="password1" placeholder="Password" required><br><br>
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+        <form action="">
+          <div class="col">
+            <div class="hide-sm-lg">
+           
+            </div>
+    
+            <input type="text" name="username" id="username" placeholder="admin@admin.com" required=""><br><br>
+            <input type="password" name="password" id="password" placeholder="12345" required><br><br>
+            <input type="submit" value="Login"  onclick="validate()">
+            <a href="#" style="color:rgb(0, 0, 0)" class="btn">Forgot password?</a>
+          </div>
+          
+        </div>
+        <div class="col">
+           
+          </div>
+      </form>
+    </div>
+    
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: Rs.<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="checkout.html" button type="button" class="btn btn-primary" >Order now</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    
+    <div w3-include-html="footer.html"></div>
+
+    
+    <script>
+        includeHTML();
+        </script>
+        <script src="js/script.js"></script>
+
+</body>
+</html>
+
+    

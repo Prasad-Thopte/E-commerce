@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persians</title>
+ <link href="css/style.css" rel="stylesheet" type="text/css"> 
+   
+
+<script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+<script src="code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+
+
+
+
+<!---Include Html File-->
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
+    <!---Include Html File-->
+</head>
+<body>
+
+<div w3-include-html="header.html"></div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Checkout</a></li>
+  
+  </ol>
+</nav>
+      
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    
+    
+  
+    .col-25 {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+    }
+    
+    .col-50 {
+      -ms-flex: 50%; /* IE10 */
+      flex: 50%;
+    }
+    
+    .col-75 {
+      -ms-flex: 75%; /* IE10 */
+      flex: 75%;
+    }
+    
+    .col-25,
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+    
+    .container1 {
+      background-color: #f2f2f2;
+      padding: 5px 20px 15px 20px;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+    }
+    
+    input[type=text],[type=email],[type=number] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+</style>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row content">
+        <div class="col-sm-6 ">
+          <h3>Fill Contact Details</h3>
+         
+                  <form action="success.html">
+                  
+                    <div class="col-sm-8">
+                        <h3>Billing Address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Name" required="">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required="">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="Address" required="">
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="City" required="">
+                        <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="State" required="">
+                        
+                        
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="Pin Code" required="">
+                          </div>
+                       
+                      
+            
+                          <div class="col-sm-4">
+
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                          <i class="fa fa-cc-visa" style="color:navy;"></i>
+                          <i class="fa fa-cc-amex" style="color:blue;"></i>
+                          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                          <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Name On Card" required="">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required="">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="number" id="expmonth" name="expmonth" placeholder="Month" required="">
+                        
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="Year" required="">
+                          
+                        
+                            <label for="cvv">CVV</label>
+                            <input type="number" id="cvv" name="cvv" placeholder="CVV" required="">
+                          
+                            <input type="submit" value="Continue to checkout" class="btn">
+                      </form>
+       
+                      
+                      
+                    
+                          </div>
+                          
+        </div>
+    
+                
+    
+        <div class="col-sm-6">
+          <div class="container-fluid">
+            <div class="row content">
+              <div class="col-sm-9 sidenav">
+              
+          <h3>Your Cart</h3>
+          <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Total price: Rs.<span class="total-cart"></span></div>
+              
+            </form>
+            </div>
+          
+          </div>
+          </div>
+          </div>
+                </div>
+              </div>
+            </div>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<br><br>
+    <div w3-include-html="footer.html"></div>
+
+    
+
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: Rs.<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="checkout.html" button type="button" class="btn btn-primary" >Order now</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <script>
+        includeHTML();
+        </script>
+        <script src="js/script.js"></script>
+</body>
+</html>

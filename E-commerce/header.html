@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Prasad Thopte">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Persians</title>
+  
+       
+  
+  <link href="css/style.css" rel="stylesheet" type="text/css"> 
+ 
+
+  <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+<script src="code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+  </head>
+<body>
+  
+    
+ 
+<!--header-->
+  <!--=========-TOP_BAR============-->
+  <nav class="topBar">
+    <div class="container">
+      <ul class="list-inline pull-left hidden-sm hidden-xs">
+        <li><span class="text-primary">Have a question? </span>Call <a href="tel:+0012447565">0012447565</a></li> 
+      </ul>
+      <ul class="topBarNav pull-right">
+      
+       
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false"> <i class="fa fa-user mr-5"></i><span class="hidden-xs">My Account<i class="fa fa-angle-down ml-5"></i></span> </a>
+          <ul class="dropdown-menu w-150" role="menu">
+            <li><a href="login.html">Login</a>
+            </li>
+            <li><a href="login.html">Create Account</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="wishlist.html">Wishlist (5)</a>
+            </li>
+            <li><a href="cart.html">My Cart</a>
+            </li>
+            <li><a href="checkout.html">Checkout</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> (<span class="total-count"></span>)</i></button>
+          
+                  
+                  <!-- end item -->
+                
+              </div>
+        
+    </div>
+  </nav><!--=========-TOP_BAR============-->
+    
+ <!--=========MIDDEL-TOP_BAR============-->
+    
+    <div class="middleBar">
+    <div class="container">
+  <div class="row display-table">
+    <div class="col-sm-3 vertical-align text-left hidden-xs">
+      <a href="index.html"> <img width="" src="img/rsz_1a41ec249a7b14b7eb73f328fe0d2f3d8.png" height="50px" alt=""></a>
+    </div>
+    <!-- end col -->
+    <div class="col-sm-7 vertical-align text-center">
+      <form>
+        <div class="row grid-space-1">
+          <div class="col-sm-6">
+            <input type="text" name="keyword" class="form-control input-lg" placeholder="Search">
+         </div>
+          <!-- end col -->
+          <div class="col-sm-3">
+            <select class="form-control input-lg" name="category">
+              <option value="all">All Categories</option>
+              <optgroup label="Mens">
+                <option value="shirts"><a href="products.html">Shirts</a></option>
+                <option value="coats-jackets"><a href="products.html">Coats & Jackets</a></option>
+                <option value="Jeans"><a href="products.html">Jeans</a></option>
+                <option value="sunglasses"><a href="products.html">Sunglasses</a></option>
+               
+              </optgroup>
+              <optgroup label="Womens">
+                <option value="bresses"><a href="products.html">Dresses</a></option>
+                <option value="t-shirts"><a href="products.html">T-shirts</a></option>
+                <option value="skirts"><a href="products.html">Skirts</a></option>
+                <option value="jeans"><a href="products.html">Jeans</a></option>
+                
+              </optgroup>
+             
+              <optgroup label="Kids">
+                <option value="shoes"><a href="products.html">Shoes</a></option>
+                <option value="bags"><a href="products.html">Bags</a></option>
+                <option value="pants"><a href="products.html">Pants</a></option>
+          
+              </optgroup>
+            
+            </select>
+          </div>
+          <!-- end col -->
+          <div class="col-sm-3">
+            <input type="submit" class="btn btn-default btn-block btn-lg" value="Search">
+            
+         </div>
+          <!-- end col -->
+
+
+          
+        </div>
+        <!-- end row -->
+      </form>
+    </div>
+    <!-- end col -->
+   
+    <!-- end col -->
+  </div>
+  <!-- end  row -->
+</div>
+</div>
+    
+    
+<nav class="navbar navbar-main navbar-default" role="navigation" style="opacity: 1;">
+          <div class="container">
+            <!-- Brand and toggle -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>             
+            </div>
+        
+            <!-- Collect the nav links,  -->
+            <div class="collapse navbar-collapse navbar-1" style="margin-top: 0px;">            
+              <ul class="nav navbar-nav">
+                <li><a href="index.html" class="dropdown-toggle"  data-hover="dropdown" data-close-others="false">Home</a></li>
+                  
+                <li class="dropdown megaDropMenu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Shop <i class="fa fa-angle-down ml-5"></i></a>
+                  <ul class="dropdown-menu row">
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Men's</li>
+                        <li><a href="products.html">Shirts</a></li>
+                        <li><a href="products.html">Jeans</a></li>
+                        <li><a href="products.html">Formals</a></li>
+                     </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Women's</li>
+                        <li><a href="products.html">T-shirt</a></li>
+                        <li><a href="products.html">Jeans</a></li>
+                        <li><a href="products.html">Dresses</a></li>
+                       </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Kid's</li>
+                        <li><a href="products.html">Shirt's</a></li>
+                        <li><a href="products.html">Jeans</a></li>
+                        <li><a href="products.html">T-shirt</a></li>
+                     </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                        <ul class="list-unstyled">
+                        <li>Shop Now</li>
+                     </ul>
+                      <img src="img/4389885_1325.jpg" class="img-responsive" alt="menu-img">
+                    </li>
+                  </ul>
+                </li>
+                  
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Usefull Links <i class="fa fa-angle-down ml-5"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-left">
+                    
+                    <li><a href="#">Register or Login</a></li>
+                   
+                    <li><a href="#">Password Recovery</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                 
+                  </ul>
+                </li>
+                <li><a href="about.html" class="dropdown-toggle"  data-hover="dropdown" data-close-others="false">About Us</a></li>
+                <li><a href="contact.html" class="dropdown-toggle"  data-hover="dropdown" data-close-others="false">Contact Us</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </nav>
+    <!--header-->
+
+
+</body>
+
+</html>
